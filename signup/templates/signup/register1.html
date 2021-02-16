@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <title>SIGN UP</title>
+</head>
+
+<body class="myregisterbody">
+
+    {% include 'home/navbar.html' %}
+        
+        <form method="POST" action="" enctype="multipart/form-data">
+
+            {% csrf_token %}
+           
+            <div class="col-lg-4 m-auto mt-4">
+              <label>Enter Your Email</label>
+
+                {{form.email1}}
+
+                <small id="emailHelp" class="form-text text-muted"></br>We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="col-lg-4 m-auto mt-4">
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Phone</label>
+                <div class="col-10">
+
+                    {{form.tele1}}
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 m-auto mt-4">
+            <div class="form-group">
+            <label>ENTER YOUR PROFESSION</label>
+
+                {{form.pro1}}
+
+            </div>
+        </div>
+
+            
+        <div class="col-lg-4 m-auto mt-4">
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Experience in Years</label>
+                <div class="col-10">
+
+                    {{form.experience1}}
+
+                </div>
+              </div>
+              </div>
+            
+            
+                 
+            <div class="container col-lg-4 d-flex justify-content-center">
+
+                  <label class="col-2 col-form-label">ENTER YOUR GENDER</label>
+                
+                
+                  {{form.gender1}}
+
+               
+
+            </div>
+              
+                 
+            <div class="container col-lg-12 d-flex justify-content-center mt-4">
+            <div class="form-group">
+                <label>Describe More About Yourself</label></br>
+
+                {{form.description1}}
+
+            </div>
+            </div>
+            
+            
+                 
+            <div class="col-lg-4 m-auto mt-4"> 
+            <div class="form-group">
+              <label>File input</label>
+
+                {{form.myfile1}}
+
+
+              <div>
+              <small id="fileHelp" class="form-text text-muted">Upload Your Relevent Certificates(Skill India Certification Mandatory)</small>
+              </div>
+            </div>
+            </div>
+
+           
+           
+                 
+            <div class="col-lg-4 m-auto mt-4">
+            <div class="form-group">
+                <label class="col-2 col-form-label">Username</label>
+
+                {{form.username1}}
+
+
+                </div>
+            </div>
+
+              
+            
+                 
+            <div class="col-lg-4 m-auto mt-4">
+            <div class="form-group">
+              <label>Password</label>
+
+                {{form.password1}}
+
+
+            </div>
+            </div>
+
+            
+                 
+            <div class="col-lg-4 m-auto mt-4">
+            <div class="form-group">
+                <label>Confirm Password</label>
+
+                        {{form.confirmpassword1}}
+
+              </div>
+            </div>
+              
+            
+                 
+            <div class="container col-lg-12 d-flex justify-content-center mt-2">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+               Agree To Our Terms & Conditions
+              </label>
+            </div>
+            </div>
+            
+                 
+            <div class="container col-lg-12 d-flex justify-content-center mt-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        
+        </form>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+</body>
+</html>
